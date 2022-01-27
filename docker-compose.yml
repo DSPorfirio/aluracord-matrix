@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  app:
+    container_name: alura_react
+    build: .
+    environment:
+      CHOKIDAR_USEPOLLING: "true"      
+    ports:
+      - 3000:3000
+    volumes: 
+      - ./:/var/www/html
+    tty: true
+    stdin_open: true
